@@ -8,23 +8,11 @@ module.exports = {
 };
 
 //connection limit is set for different dbs user can add more db if not set then it will take 10 as a limit
-module.exports.DBConfigs = {
-	"INTOUCH_DB_MYSQL_MASTER" : {
-		"connectionLimit" : 30
-	},
-	"INTOUCH_DB_MYSQL_SLAVE" : {
-		"connectionLimit" : 15
-	},
-	"INTOUCH_META_DB_MYSQL_MASTER" : {
-		"connectionLimit" : 15
-	},
-	"INTOUCH_META_DB_MYSQL_SLAVE" : {
-		"connectionLimit" : 15
-	},
-	"AUTHORIZATION_DB_MYSQL" : {
-		"connectionLimit" : 15
-	},
-	"REGISTRAR_DB_MYSQL_MASTER" : {
-		"connectionLimit" : 15
-	}
+module.exports.DBMaxConnectionLimit = {
+	"INTOUCH_DB_MYSQL_MASTER" : 50,
+	"INTOUCH_DB_MYSQL_SLAVE" : 15,
+	"INTOUCH_META_DB_MYSQL_MASTER":50,
+	"INTOUCH_META_DB_MYSQL_SLAVE" : 15,
+	"AUTHORIZATION_DB_MYSQL": 30,
+	"REGISTRAR_DB_MYSQL_MASTER": 15
 };

@@ -29,10 +29,10 @@ mainConfig.getCheetahConfig = function getCheetahConfig() {
     return ini.parseSync( cfg.CheetahConfig );
 }
 
-mainConfig.getDBLoadConfig = function getDBLoadConfig(dbService) {
+mainConfig.getDBMaxLimitConfig = function getDBMaxLimitConfig(dbService) {
 
-    return typeof cfg.DBConfigs[dbService] === 'undefined' ?
-                {"connectionLimit":10} : cfg.DBConfigs[dbService];
+    return typeof cfg.DBMaxConnectionLimit[dbService] === 'undefined' ?
+                10 : cfg.DBMaxConnectionLimit[dbService];
 }
 
 module.exports = mainConfig;
