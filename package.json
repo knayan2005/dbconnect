@@ -1,0 +1,39 @@
+{
+  "name": "dbconnect",
+  "version": "1.0.0",
+  "description": "Arya dbconnect is the node library to manage DB Connections with capillary DB services",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node examples/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knayan2005/dbconnect.git"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "keywords": [
+    "dbconnect",
+    "arya",
+    "mysql"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "mysql": "^2.11.1",
+    "node-ini": "^1.0.0",
+    "node-libcurl": "^1.0.0",
+    "promise": "^7.1.1",
+    "redis": "^2.6.2",
+    "underscore": "^1.8.3"
+  },
+  "author": "Nayan Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knayan2005/dbconnect/issues"
+  },
+  "homepage": "https://github.com/knayan2005/dbconnect#readme"
+}
