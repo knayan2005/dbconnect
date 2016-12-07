@@ -4,8 +4,12 @@ DB Connect
 A library that handles db operations of capillary db services with shard support
 
 ## Installation
-
-  `npm install dbconnect`
+   
+   add dependency package in your package.json.
+   
+   {"dbconnect": "git@github.com:knayan2005/dbconnect.git"}
+   
+  `npm install dbconnect` [don't use it for now] [TODO]
 
 ## Usage
 
