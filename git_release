@@ -1,0 +1,16 @@
+#!/bin/bash 
+CURRENT_VERSION=$(dpkg-parsechangelog --count 1 | awk '/^Version: / {print $2}')
+
+echo "------------starting release $CURRENT_VERSION --------------"
+git flow release start $CURRENT_VERSION
+echo "------------finishing release $CURRENT_VERSION--------------"
+git flow release finish $CURRENT_VERSION
+echo "-----------finished release $CURRENT_VERSION---------------"
+git checkout master
+echo "-----------update changelog version------------------------"
+echo "Continuing to update changelog..."
+git-dch --release --auto --spawn-editor=release
+
+git commit -m "new trunk version added"
+git push origin master
+
